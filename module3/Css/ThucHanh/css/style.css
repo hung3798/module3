@@ -1,0 +1,9 @@
+.container {
+    margin: 0 auto;
+    width: 1300px;
+    height: 1700px;
+    background: #cce5ff;
+}
+.main {
+    text-align: center;
+}

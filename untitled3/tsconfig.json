@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "outDir": "mjs",
+    "removeComments": true,
+    "watch": true
+  },
+  "exclude": [
+    "css",
+    "js",
+    "fonts"
+  ]
+}

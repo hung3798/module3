@@ -1,0 +1,6 @@
+<p>testmodel works!</p>
+<label>
+  <input type="text" placeholder="input name user" [(ngModel)]="name" (ngModelChange)="changeColor(name)">
+</label>
+<h3 [style.color]="isColor ? 'red' : 'black'">Your name is: {{name}}</h3>
+<div [class]="isColor ? 'dark' : 'light'"></div>

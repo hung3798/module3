@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../lib/js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#hidden").click(function(){
+                $("#anhgai").hide();
+                $("#anhgai2").hide();
+                $(this).hide();
+            });
+            $("#button1").click(function(){
+                $(this).hide();
+                $(this).hide();
+            });
+            $("#heddenAll").click(function(){
+                $("*").hide();
+            });
+            $("#button2").click(function(){
+                $("img.girl1").hide();
+                $(this).hide();
+            });
+            $("#mouseenter").mouseenter(function () {
+                alert("dit me huy");
+            });
+            $("#input").focus(function(){
+                $("*").css("background-color", "#cccccc");
+            });
+            $("input2").blur(function(){
+                $(this).css("background-color", "#ffffff");
+            });
+            $("#button3").on({
+                mouseenter: function(){
+                    $(this).css("background-color", "lightgray");
+                },
+                mouseleave: function(){
+                    $(this).css("background-color", "lightblue");
+                },
+                click: function(){
+                    $(this).css("background-color", "yellow");
+                }
+            });
+        });
+    </script>
+<body>
+
+<button id="hidden">hidden</button>
+<img id="anhgai" src="../../Image/girl8.png" height="200" width="320"/></head>
+<img class="girl1" src="../../Image/girl8.png" height="200" width="320"/>
+<img id="anhgai1" src="../../Image/girl3.png" height="200" width="320"/></head>
+<img id="anhgai2" src="../../Image/girl6.png" height="200" width="320"/></head>
+<img class="girl1" src="../../Image/asley.png" height="720" width="720"/>
+<button id="button1"><img src="../../Image/girl8.png" height="200" width="320"/></button>
+<button id="button2">xoa het girl1</button>
+<button id="heddenAll">xoa het trang</button>
+<button id="input">focus</button>
+<button id="input2">blur</button>
+<button id="button3">blur</button>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<button (click)="showFormAdd()">them tu moi</button>
+<div *ngIf="isAddWord" class="bg-success">
+  <label>
+    <h4>vietnamese</h4><br>
+    <input type="text" [(ngModel)]="vnWord"><br>
+    <h4>english</h4><br>
+    <input type="text" [(ngModel)]="enWord"><br>
+    <button (click)="addWord();">add new word</button>
+  </label>
+</div>
+<div>
+  <label>
+    <select [(ngModel)]="filterStatus">
+      <option value="showAll">xem tất cả</option>
+      <option value="showRemember">từ đã nhớ</option>
+      <option value="showMiss">từ chưa nhớ</option>
+    </select>
+  </label>
+</div>
+<div class="newWord" *ngFor="let word of arrWords">
+<!--  <div *ngIf="filterStatus === 'showAll' || (filterStatus === 'showRemember' && word.memorized) || (filterStatus === 'showMiss' && !word.memorized)">-->
+  <div *ngIf="getShowStatus(word.memorized)">
+  <h4 [style.color]="word.memorized ? 'green':'red'">{{word.en}}</h4>
+    <p>{{word.vn}}</p>
+    <button class="btn btn-success" (click)="deleteWord(word.id);">xóa</button>
+    <br><br>
+    <button class="btn btn-success" (click)="word.memorized = !word.memorized">{{word.memorized ? 'miss' : 'remember'}}</button>
+  </div>
+</div>

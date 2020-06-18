@@ -1,0 +1,59 @@
+body {
+    font-family: helve, Arial, sans-serif;
+    color: aquamarine;
+    font-weight: 300;
+    font-size: 30px;
+    margin: 0;
+}
+
+.container {
+    padding: 0.3em 1em;
+}
+
+.header {
+    background: #333333;
+    color: #ffff;
+    padding: 0.3em 1em;
+}
+
+.main {
+    padding: 0.3em 1em;
+}
+
+.content {
+    background: #e8e8e8;
+    padding: 0.3em 1em;
+}
+
+.sidebar {
+    background: #f0ff26;
+    font-size: 95%;
+    padding: 0.3em 1em;
+}
+
+@media screen and (min-width: 600px){
+    .main:before, .main:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .main {
+        max-width: 100%;
+    }
+    .content {
+        width: 63.3%;
+        float: left;
+        margin-right: 1.5%;
+    }
+    .sidebar {
+        width: 35%;
+        float: left;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .container {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+}

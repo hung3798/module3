@@ -1,0 +1,11 @@
+.dark {
+  background: darkslategray;
+  width: 100px;
+  height: 100px;
+}
+
+.light {
+  background: lightcyan;
+  width: 100px;
+  height: 100px;
+}
